@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # prepare
 mkdir -p $DIR/../tmp
@@ -24,4 +24,3 @@ node ./scripts/all-npm.js install
 # cd $DIR/..
 # cp -r ./tmp/vscode-anycode/anycode/dist ./dist/anycode-language-server
 # npx babel ./dist/anycode-language-server --out-dir ./lib/anycode-language-server/
-

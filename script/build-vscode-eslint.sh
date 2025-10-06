@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # prepare
 mkdir -p $DIR/../tmp
@@ -28,4 +28,3 @@ cd $DIR/..
 mkdir -p ./dist/eslint-language-server
 cp -r ./tmp/vscode-eslint/server/out/* ./dist/eslint-language-server/
 npx babel ./dist/eslint-language-server --out-dir ./lib/eslint-language-server/
-

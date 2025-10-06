@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # prepare
 mkdir -p $DIR/../tmp
@@ -39,4 +39,3 @@ npx babel ./dist/json-language-server --out-dir ./lib/json-language-server/
 mkdir -p ./dist/markdown-language-server
 cp -r ./tmp/vscode/extensions/markdown-language-features/server/out/* ./dist/markdown-language-server/
 npx babel ./dist/markdown-language-server --out-dir ./lib/markdown-language-server/
-
